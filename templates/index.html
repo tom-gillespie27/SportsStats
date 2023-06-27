@@ -1,0 +1,80 @@
+<!-- templates/index.html -->
+
+
+<!DOCTYPE html>
+<html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+  
+<div>
+    <img width="450" height="300" src="{{url_for('static', filename='NFL-logo.png')}}" class = center> 
+    <h1>Enter Your NFL Team!</h1>
+    <form action="{{url_for('.get_team')}}" method="POST" class="needs-validation" novalidate>
+    
+
+    <select class="form-select" name="team_name" required>
+
+
+        <option value="" disabled selected>Select a Football Team</option>
+        <option value="Arizona Cardinals">Arizona Cardinals</option>
+        <option value="Atlanta Falcons">Atlanta Falcons</option>
+        <option value="Carolina Panthers">Carolina Panthers</option>
+        <option value="Chicago Bears">Chicago Bears</option>
+        <option value="Dallas Cowboys">Dallas Cowboys</option>
+        <option value="Detroit Lions">Detroit Lions</option>
+        <option value="Green Bay Packers">Green Bay Packers</option>
+        <option value="Los Angeles Rams">Los Angeles Rams</option>
+        <option value="Minnisota Vikings">Minnisota Vikings</option>
+        <option value="New Orleans Saints">New Orleans Saints</option>
+        <option value="New York Giants">New York Giants</option>
+        <option value="Philadelphia Eagles">Philadelphia Eagles</option>
+        <option value="San Francisco 49ers">San Francisco 49ers</option>
+        <option value="Seattle Seahawks">Seattle Seahawks</option>
+        <option value="Tampa Bay Buccaneers">Tampa Bay Buccaneers</option>
+        <option value="Washington Commanders">Washington Commanders</option>
+        <option value="Baltimore Ravens">Baltimore Ravens</option>
+        <option value="Buffalo Bills">Buffalo Bills</option>
+        <option value="Cincinnati Bengals">Cincinnati Bengals</option>
+        <option value="Cleveland Browns">Cleveland Browns</option>
+        <option value="Denver Broncos">Denver Broncos</option>
+        <option value="Houston Texans">Houston Texans</option>
+        <option value="Indianapolis Colts">Indianapolis Colts</option>
+        <option value="Jacksonville Jaguars">Jacksonville Jaguars</option>
+        <option value="Kansas City Chiefs">Kansas City Chiefs</option>
+        <option value="Las Vegas Raiders">Las Vegas Raiders</option>
+        <option value="Los Angeles Chargers">Los Angeles Chargers</option>
+        <option value="Miami Dolphins">Miami Dolphins</option>
+        <option value="New England Patriots">New England Patriots</option>
+        <option value="New York Jets">New York Jets</option>
+        <option value="Pittsburgh Steelers">Pittsburgh Steelers</option>
+        <option value="Tennessee Titans">Tennessee Titans</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+      
+</form>
+</div>
+</body> 
+
+</html>
